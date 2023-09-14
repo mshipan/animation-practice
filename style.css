@@ -1,0 +1,189 @@
+.mega-box{
+    width: 500px;
+    height: 400px;
+    border: 5px solid skyblue;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.mini-mini{
+    width: 100px;
+    border: 3px solid indianred;
+    overflow: hidden;
+}
+
+.short-text{
+    white-space: nowrap;
+    /* dot dot asbe */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.mango-people{
+    width: 500px;
+    height: 400px;
+    border: 5px solid green;
+}
+
+.container, .inner{
+    width: 150px;
+    height: 150px;
+    border: 2px solid red;
+}
+
+.container{
+    background-color: blueviolet;
+}
+
+.inner{
+    background-color: aqua;
+    /* transform: scale(0.75); */
+    transform: translate(100px, 50px) rotate(45deg) scale(0.75);
+}
+
+.box{
+    display: flex;
+    width: 200px;
+    height: 200px;
+    border: 2px solid cadetblue;
+    background-color: brown;
+    color: #FFFF;
+    justify-content: center;
+    align-items: center;
+    transition: width 5s linear 0.2s, height 5s ease 0.2s, transform 5s;
+}
+
+.box:hover{
+    width: 400px;
+    height: 300px;
+    transform: rotate(180deg);
+}
+
+.feild{
+    border: 1px solid black;
+}
+
+.ball{
+    position: relative;
+    left: 200px;
+    top: -2px;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    transition: transform 1s ease-out 0.23s;
+}
+
+
+.feild:hover .ball{
+    transform: translate(280px, -100px);
+}
+
+.feild img{
+    width: 150px;
+    height: 150px;
+    transition: transform 0.2s ease-in;
+}
+
+.feild:hover img{
+    transform: rotate(-60deg);
+    transform-origin: top right;
+}
+
+.stage{
+    width: 500px;
+    height: 300px;
+    background-color: lightskyblue;
+}
+
+@keyframes sliding {
+    /* from{
+        background-color: red;
+        left: 0;
+    }
+    to{
+        background-color: magenta;
+        left: 400px;
+    }
+} */
+    0%{
+        background-color: red;
+        left: 0;
+        top: 0;
+    }
+    50%{
+        top: 200px;
+    }
+    100%{
+        background-color: magenta;
+        left: 400px;
+        top: 0;
+    }
+}
+.box1{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    border-radius: 50%;
+    animation: sliding 1s ease-in-out 0.5s infinite alternate;
+    animation-play-state: running;
+}
+
+/* Opacity Animation */
+
+#animation{
+    height: 500px;
+    width: 500px;
+    background-color: blue;
+    color: #FFFFFF;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+ 
+    /* Background Gulo Pichone Thakbe */
+    z-index: 1;
+}
+
+#animation::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/img/footer-shape1.png);
+    animation: imgChange 1s linear 1s infinite;
+}
+
+#animation::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/img/footer-shape2.png);
+    animation: imgChangeTwo 1s linear 1s infinite;
+}
+
+@keyframes imgChange {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes imgChangeTwo {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
